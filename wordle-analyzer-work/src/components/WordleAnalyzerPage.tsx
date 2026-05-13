@@ -38,7 +38,7 @@ export function WordleAnalyzerPage({ recentPosts, faqItems }: WordleAnalyzerPage
             </p>
             <p className="text-xs text-muted-foreground mt-2 flex items-center justify-center gap-1.5">
               <Calendar className="h-3 w-3" aria-hidden="true" />
-              Last updated: March 4, 2025 · Trusted by 10,000+ players
+              Last updated: May 2026 · Trusted by 10,000+ players
             </p>
           </motion.div>
 
@@ -47,7 +47,7 @@ export function WordleAnalyzerPage({ recentPosts, faqItems }: WordleAnalyzerPage
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="max-w-sm sm:max-w-lg mx-auto"
+            className="max-w-md sm:max-w-xl lg:max-w-2xl mx-auto"
           >
             <WordleAnalyzer />
           </motion.div>

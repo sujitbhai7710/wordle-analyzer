@@ -36,7 +36,7 @@ function LuckBadge({ level }: { level: LuckLevel }) {
 
 function TileRow({ clue }: { clue: { letter: string; color: 'correct' | 'present' | 'absent' }[] }) {
   return (
-    <div className="flex gap-[3px] sm:gap-1">
+    <div className="flex gap-[2px] sm:gap-[3px]">
       {clue.map((c, i) => (
         <TileCell key={i} letter={c.letter} color={c.color} index={i} />
       ))}
@@ -63,14 +63,14 @@ function ComparisonTable({ turn, turnNumber }: { turn: TurnAnalysis; turnNumber:
             <tr className="border-b">
               <td className="py-2 px-3 text-muted-foreground">Guess</td>
               <td className="py-2 px-3 text-center">
-                <div className="flex gap-[3px] justify-center">
+                <div className="flex gap-[2px] justify-center">
                   {turn.clue.map((c, i) => (
                     <TileCell key={i} letter={c.letter} color={c.color} index={i} />
                   ))}
                 </div>
               </td>
               <td className="py-2 px-3 text-center">
-                <div className="flex gap-[3px] justify-center">
+                <div className="flex gap-[2px] justify-center">
                   {turn.aiClue.map((c, i) => (
                     <TileCell key={`ai-${i}`} letter={c.letter} color={c.color} index={i} />
                   ))}

@@ -40,6 +40,17 @@ export function WordleAnalyzer() {
       const oldValue = prev[rowIndex];
       newInputs[rowIndex] = filtered;
 
+      // Auto-advance: if the row just became full (5 chars) and it wasn't before, focus next row
+      if (filtered.length === WORD_LENGTH && oldValue.length < WORD_LENGTH) {
+        const nextRow = rowIndex + 1;
+        if (nextRow < MAX_ROWS) {
+          setTimeout(() => {
+            inputRefs.current[nextRow]?.focus();
+            setFocusedRow(nextRow);
+          }, 50);
+        }
+      }
+
       // If overflow: user typed a 6th char when 5 already exist
       if (value.length > WORD_LENGTH && oldValue.length === WORD_LENGTH && value.startsWith(oldValue)) {
         const overflowChar = value.slice(WORD_LENGTH).replace(/[^a-zA-Z]/g, '').slice(0, 1).toUpperCase();
@@ -51,7 +62,7 @@ export function WordleAnalyzer() {
           setTimeout(() => {
             inputRefs.current[nextRow]?.focus();
             setFocusedRow(nextRow);
-          }, 0);
+          }, 50);
         }
       }
 

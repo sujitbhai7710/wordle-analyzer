@@ -37,7 +37,7 @@ export function TileCell({
   if (isAnalysisMode) {
     return (
       <div
-        className={`w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center text-base sm:text-lg md:text-xl font-bold uppercase border-2 select-none ${
+        className={`w-[38px] h-[38px] sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center text-sm sm:text-base md:text-lg font-bold uppercase border-2 select-none ${
           colorMap[color] || colorMap.empty
         }`}
         style={
@@ -60,7 +60,7 @@ export function TileCell({
       type="button"
       onClick={onClick}
       disabled={isDisabled}
-      className={`w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex items-center justify-center text-base sm:text-lg md:text-xl font-bold uppercase select-none transition-all duration-100 ${
+      className={`w-[38px] h-[38px] sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center text-sm sm:text-base md:text-lg font-bold uppercase select-none transition-all duration-100 ${
         hasChar
           ? 'border-2 border-gray-500 dark:border-gray-400 bg-transparent'
           : 'border-2 border-gray-300 dark:border-gray-600 bg-transparent'
