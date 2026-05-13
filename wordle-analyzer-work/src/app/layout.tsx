@@ -21,12 +21,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://wordleanalyzer.dev"),
   title: {
-    default: "Wordle Analyzer - Was It Luck or Genius? Analyze Your Wordle Gameplay",
+    default: "Wordle Analyzer- your free wordlebot",
     template: "%s | Wordle Analyzer",
   },
   description:
-    "Analyze your Wordle gameplay with data-driven insights. Discover your luck rating, guess quality, and AI-recommended optimal plays. Free Wordle analyzer tool trusted by thousands of players.",
+    "Wordle Analyzer is your free wordlebot for analyzing Wordle gameplay. Discover your luck rating, guess quality, and AI-recommended optimal plays with our Wordle Analyzer wordlebot tool.",
   keywords: [
+    "Wordle Analyzer",
+    "wordlebot",
     "Wordle analyzer",
     "Wordle analysis",
     "Wordle solver",
@@ -36,7 +38,8 @@ export const metadata: Metadata = {
     "Wordle luck rating",
     "Wordle guess quality",
     "Wordle helper",
-    "Wordle score analysis",
+    "wordlebot tool",
+    "free wordlebot",
     "improve Wordle",
     "Wordle optimal play",
   ],
@@ -50,9 +53,9 @@ export const metadata: Metadata = {
     canonical: "https://wordleanalyzer.dev",
   },
   openGraph: {
-    title: "Wordle Analyzer - Was It Luck or Genius?",
+    title: "Wordle Analyzer- your free wordlebot",
     description:
-      "Analyze your Wordle gameplay with data-driven insights. Discover your luck rating, guess quality, and AI-recommended optimal plays.",
+      "Wordle Analyzer is your free wordlebot for analyzing Wordle gameplay. Discover your luck rating, guess quality, and AI-recommended optimal plays.",
     url: "https://wordleanalyzer.dev",
     siteName: "Wordle Analyzer",
     type: "website",
@@ -60,9 +63,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wordle Analyzer - Was It Luck or Genius?",
+    title: "Wordle Analyzer- your free wordlebot",
     description:
-      "Analyze your Wordle gameplay with data-driven insights. Discover your luck rating, guess quality, and AI-recommended optimal plays.",
+      "Wordle Analyzer is your free wordlebot for analyzing Wordle gameplay. Discover your luck rating, guess quality, and AI-recommended optimal plays.",
     creator: "@wordleanalyzer",
   },
   robots: {
@@ -120,6 +123,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Domain redirect: wordle-analyzer.pages.dev → wordleanalyzer.dev */}
+        <Script id="domain-redirect" strategy="beforeInteractive">
+          {`
+            if (window.location.hostname === 'wordle-analyzer.pages.dev') {
+              window.location.replace('https://wordleanalyzer.dev' + window.location.pathname + window.location.search + window.location.hash);
+            }
+          `}
+        </Script>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-TMZQS9R3HB"
           strategy="afterInteractive"

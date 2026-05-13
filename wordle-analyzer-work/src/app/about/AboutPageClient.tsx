@@ -39,7 +39,7 @@ export function AboutPageClient() {
         </p>
         <p className="text-xs text-muted-foreground mt-3 flex items-center justify-center gap-1.5">
           <Calendar className="h-3.5 w-3.5" aria-hidden="true" />
-          Last updated: May 2025 · Originally launched: January 2023
+          Last updated: May 2026 · Originally launched: January 2023
         </p>
       </motion.div>
 

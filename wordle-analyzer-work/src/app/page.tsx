@@ -4,9 +4,10 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { blogPosts } from '@/lib/blog/posts';
 
 export const metadata: Metadata = {
-  title: 'Wordle Analyzer - Was It Luck or Genius? Analyze Your Wordle Gameplay',
+  title: 'Wordle Analyzer- your free wordlebot',
   description:
-    'Analyze your Wordle gameplay with data-driven insights. Discover your luck rating, guess quality, and AI-recommended optimal plays. Free Wordle analyzer tool trusted by 10,000+ players. All analysis runs locally in your browser.',
+    'Wordle Analyzer is your free wordlebot for analyzing Wordle gameplay. Discover your luck rating, guess quality, and AI-recommended optimal plays with our Wordle Analyzer wordlebot tool. Trusted by 10,000+ players. All analysis runs locally in your browser.',
+  keywords: ['Wordle Analyzer', 'wordlebot', 'free wordlebot', 'Wordle analysis', 'Wordle solver', 'Wordle strategy'],
   alternates: {
     canonical: 'https://wordleanalyzer.dev',
   },

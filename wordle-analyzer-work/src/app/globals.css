@@ -140,81 +140,158 @@
 
 /* ========================================
    BLOG HEADING STYLES - Clear Visual Hierarchy
-   H1: Serif font (Georgia), largest, black weight 900
-   H2: Sans-serif, large, weight 800, green accent border
-   H3: Serif font (Georgia), medium, weight 700, green tint
-   H4: Sans-serif, smaller, weight 700, uppercase
+   H1: Serif font (Georgia), largest, black weight 900, dark navy
+   H2: Sans-serif, large, weight 800, green accent underline
+   H3: Serif font (Georgia), medium, weight 700, green-tinted
+   H4: Sans-serif, smaller, weight 700, uppercase, muted
    ======================================== */
 
 .blog-content h1 {
   font-family: Georgia, 'Times New Roman', serif !important;
-  font-size: clamp(2rem, 5vw, 2.75rem) !important;
+  font-size: 2.5rem !important;
   font-weight: 900 !important;
-  color: oklch(0.15 0 0) !important;
+  color: #1a2332 !important;
   line-height: 1.2 !important;
   margin-top: 3rem !important;
-  margin-bottom: 1.25rem !important;
+  margin-bottom: 1.5rem !important;
   letter-spacing: -0.02em !important;
+  display: block !important;
 }
 
 .dark .blog-content h1 {
-  color: oklch(0.95 0 0) !important;
+  color: #e8eff8 !important;
 }
 
 .blog-content h2 {
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: clamp(1.5rem, 3.5vw, 2rem) !important;
+  font-size: 1.75rem !important;
   font-weight: 800 !important;
-  color: oklch(0.25 0 0) !important;
+  color: #2d3748 !important;
   line-height: 1.3 !important;
   margin-top: 2.75rem !important;
-  margin-bottom: 1rem !important;
+  margin-bottom: 1.25rem !important;
   padding-bottom: 0.6rem !important;
   border-bottom: 3px solid #6aaa64 !important;
   letter-spacing: -0.01em !important;
+  display: block !important;
 }
 
 .dark .blog-content h2 {
-  color: oklch(0.92 0 0) !important;
+  color: #e2e8f0 !important;
   border-bottom-color: #6aaa64 !important;
 }
 
 .blog-content h3 {
   font-family: Georgia, 'Times New Roman', serif !important;
-  font-size: clamp(1.2rem, 2.5vw, 1.5rem) !important;
+  font-size: 1.375rem !important;
   font-weight: 700 !important;
-  color: oklch(0.35 0.12 145) !important;
+  color: #3d7a47 !important;
   line-height: 1.4 !important;
   margin-top: 2.25rem !important;
-  margin-bottom: 0.85rem !important;
+  margin-bottom: 1rem !important;
+  display: block !important;
 }
 
 .dark .blog-content h3 {
-  color: oklch(0.72 0.15 145) !important;
+  color: #7fc48a !important;
 }
 
 .blog-content h4 {
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif !important;
-  font-size: clamp(1.05rem, 2vw, 1.2rem) !important;
+  font-size: 1.125rem !important;
   font-weight: 700 !important;
-  color: oklch(0.3 0 0) !important;
+  color: #5a6577 !important;
   line-height: 1.4 !important;
   margin-top: 1.75rem !important;
-  margin-bottom: 0.65rem !important;
+  margin-bottom: 0.85rem !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.03em !important;
+  letter-spacing: 0.04em !important;
+  display: block !important;
 }
 
 .dark .blog-content h4 {
-  color: oklch(0.85 0 0) !important;
+  color: #a0aec0 !important;
 }
 
-/* Blog Paragraph Spacing - clear visible gaps */
+/* Blog Paragraph Spacing - clear visible gaps between paragraphs */
 .blog-content p {
+  display: block !important;
   margin-top: 0 !important;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.75rem !important;
   line-height: 1.85 !important;
-  font-size: 1.05rem !important;
+  font-size: 1.0625rem !important;
+  color: var(--foreground) !important;
+}
+
+/* Ensure lists have proper spacing too */
+.blog-content ul,
+.blog-content ol {
+  margin-top: 0.75rem !important;
+  margin-bottom: 1.5rem !important;
+  padding-left: 1.75rem !important;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem !important;
+  line-height: 1.75 !important;
+  font-size: 1.0625rem !important;
+}
+
+/* Blog links */
+.blog-content a {
+  color: #6aaa64 !important;
+  font-weight: 500 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 2px !important;
+  transition: color 0.15s ease !important;
+}
+
+.blog-content a:hover {
+  color: #5a9a54 !important;
+}
+
+/* Blog blockquotes */
+.blog-content blockquote {
+  border-left: 4px solid #6aaa64 !important;
+  background: rgba(106, 170, 100, 0.06) !important;
+  border-radius: 0 0.5rem 0.5rem 0 !important;
+  padding: 1rem 1.25rem !important;
+  margin: 1.5rem 0 !important;
+  font-style: normal !important;
+}
+
+.dark .blog-content blockquote {
+  background: rgba(106, 170, 100, 0.1) !important;
+}
+
+/* Blog strong/bold */
+.blog-content strong {
+  font-weight: 700 !important;
+  color: var(--foreground) !important;
+}
+
+/* Blog images */
+.blog-content img {
+  border-radius: 0.75rem !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+  margin: 1.5rem 0 !important;
+}
+
+/* Blog inline code */
+.blog-content code {
+  background: var(--muted) !important;
+  padding: 0.15rem 0.4rem !important;
+  border-radius: 0.25rem !important;
+  font-size: 0.9em !important;
+}
+
+/* Blog pre/code blocks */
+.blog-content pre {
+  background: var(--muted) !important;
+  border-radius: 0.5rem !important;
+  padding: 1rem !important;
+  overflow-x: auto !important;
+  margin: 1.5rem 0 !important;
 }
 
 /* Blog Content Tables */
